@@ -1,0 +1,179 @@
+﻿
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/css.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/hobjetos_style01.css" />
+        <link rel="stylesheet" type="text/css" href="css/hobjetos_style02.css" />
+        <title>Hobjetos App</title>
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
+                <script type="text/javascript">
+			$(document).ready(function(){
+	$('.menu-anchor').on('click touchstart', function(e){
+		$('html').toggleClass('menu-active');
+	  	e.preventDefault();
+	});
+	
+			});
+        </script>
+    </head>
+    <body>
+        <div class="app">
+
+<header>
+	<span class="menu-anchor"></span>
+  <h1>Hobjetos App</h1>
+</header>
+
+<menu>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="contato.html">Contato</a></li>
+	</ul>
+</menu>
+
+<section class="main">
+
+    <section id="contact_meio">
+    
+    <div id="contato">
+    	<!-- Indice da pagina contato -->
+    	<div id="contato_topo">
+        	
+            <div id="logo_contato">
+            	<img src="http://www.hobjetos.com.br/images/site/logomarca_contato_hobjetos_perfumaria_e_acessorios.jpg" width="301" height="87" border="0" alt="<?php echo $titulo_site?> - Contato" />                 
+            </div>
+           </div><!--  FIM contato_topo -->
+           
+           <!-- Contato mostrar -->
+    	<div id="contato_mostrar">       
+          	<form method="post" id="contato_form" name="contato_form">
+         
+              <p>Nome   </p>
+              <input class="input_news" placeholder=" Nome" name="nomee" id="nomee" type="text">
+              <p>Email   </p>
+              <input class="input_news" placeholder=" Email" name="emaill" id="emaill" type="email"> 
+              <p>Telefone   </p>
+              <input class="input_news" placeholder=" Telefone" name="telefone" id="telefone" type="tel"> 
+               <p>Assunto   </p>
+              <input class="input_news" placeholder=" Assunto" name="assunto" id="assunto" type="text"> 
+              <p>Mensagem   </p>
+              <textarea style="width:100%; height:106px; resize:none" class="input_news" placeholder=" Mensagem" name="mensagem" id="mensagem"></textarea> 
+              
+              <button class="buttom_news" style="width:50%" id="EnviaRR" name="EnviaRR" type="submit">Enviar</button>
+              <button style="margin-right:15px; width:30%" class="buttom_news" id="ReseT" name="ReseT" type="reset">Limpar</button> 
+              
+              
+                </form>
+                
+            <script type="text/javascript">
+				$(document).ready( function() {
+					
+    /// Quando usuÃ¡rio clicar em enviar serÃ¡ feito todos os passo abaixo         
+		$('#EnviaRR').click(function() { 	
+		if (document.contato_form.nomee.value =='' || document.contato_form.emaill.value =='' || document.contato_form.telefone.value =='' || document.contato_form.assunto.value =='' || document.contato_form.mensagem.value =='' )  {    
+        alert("Por favor, preencha os campos corretamente.");        
+		}else
+		{   
+			usuario = document.contato_form.emaill.value.substring(0, document.contato_form.emaill.value.indexOf("@")); 
+			dominio = document.contato_form.emaill.value.substring(document.contato_form.emaill.value.indexOf("@")+ 1, document.contato_form.emaill.value.length); 
+			if ((usuario.length >=1) && (dominio.length >=3) && (usuario.search("@")==-1) && (dominio.search("@")==-1) && (usuario.search(" ")==-1) && (dominio.search(" ")==-1) && (dominio.search(".")!=-1) && (dominio.indexOf(".") >=1)&& (dominio.lastIndexOf(".") < dominio.length - 1)) 
+			{
+			//dados a enviar, vai buscar os valores dos campos que queremos enviar para a BD
+    var dadosajax = {
+        'campo1' : $("#nomee").val(),
+        'campo2' : $("#emaill").val(),
+		'campo3' : $("#telefone").val(),
+		'campo4' : $("#assunto").val(),
+		'campo5' : $("#mensagem").val()
+    };
+	
+    pageurl = 'http://www.hobjetos.com.br/contact.php';
+    //para consultar mais opcoes possiveis numa chamada ajax
+    //http://api.jquery.com/jQuery.ajax/
+    $.ajax({
+	
+        //url da pagina
+        url: pageurl,
+        //parametros a passar
+        data: dadosajax,
+        //tipo: POST ou GET
+        type: 'POST',
+        //cache
+        cache: false,
+        //se ocorrer um erro na chamada ajax, retorna este alerta
+        //possiveis erros: pagina nao existe, erro de codigo na pagina, falha de comunicacao/internet, etc etc etc
+        error: function(){
+            alert('Erro ao enviar Mensagem!!');
+        },
+        //retorna o resultado da pagina para onde enviamos os dados
+        success: function(result)
+        { 
+            //se foi inserido com sucesso
+            if($.trim(result) == '1')
+            {
+				alert("A sua Mensagem foi Enviada com Sucesso!\n Se necessário Responderemos no Email informado!");
+				location.reload();
+            }
+            //se foi um erro
+            else
+            {
+                alert("Ocorreu um erro ao enviar sua Mensagem!");
+				location.reload();
+            }
+
+        }
+    });
+				} // fecha valid email 
+			else{
+			alert("E-mail invalido"); 
+			} // fecha else 2
+		
+		}// fecha else 1
+		return false;
+        }); //fecha função
+		   
+				});// fecha ready
+				</script>
+          
+         </div><!--  FIM Contato Mostrar -->
+         
+     </div>
+            
+            
+         
+    
+    
+    </section>
+    </section>
+        
+    </body>
+</html>

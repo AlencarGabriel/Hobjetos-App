@@ -1,0 +1,267 @@
+	/* CSS Document V1.0 - Mamuteweb.com.br */
+
+@font-face {
+font-family: 'Myriad Pro Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Regular'), url('file:///C|/xampp/htdocs/hobjetos/scripts/css/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+
+
+/* LINKS */
+.link1{
+	font-size:14px !important;
+	color: #B967FE !important;
+	text-decoration:none !important;
+}
+
+.link1:hover{
+	color:#73BC3E !important;
+	text-decoration:underline !important;
+}
+/* FIM LINKS */
+
+
+
+	
+	
+	/* Configuracoes de Classes */
+	
+.posa{
+	margin-top: -55px;
+	margin-left: 539px;
+}
+
+.posb{
+	margin-top: -55px;
+	margin-left: 222px;
+}
+
+.posc{
+	margin-top: -55px;
+	margin-left: 250px;;
+}
+
+.titulos{
+	color:#F0F0E0;
+	font-size:20px;
+	background:url(file:///C|/xampp/htdocs/hobjetos/images/site/fd_menu.jpg) repeat-x;
+	padding:3px 2px 2px 8px;
+	border-radius:4px 4px 0 4px;
+	-moz-border-radius:4px 4px 0 4px;
+	-webkit-border-radius:4px 4px 0 4px;
+}
+
+.icone{
+	background:url(file:///C|/xampp/htdocs/hobjetos/images/site/icone_hobjetos_menu.png) no-repeat right;
+	width: 71px;
+	height: 65px;
+	display: block;	
+}
+	
+.impar{
+	margin-right:10px;
+}
+
+.par{
+	margin-left:10px;
+}
+
+.divisao{
+	width:4px;
+	height: 220px;
+	background:#AEAEAE;
+	margin-left:10px;
+	margin-right:10px;
+	clear: right;
+	float: left;
+}
+
+.checkbox1{
+	width:100%;
+	height:33px;
+	border: 1px solid #73BC3E;
+	border-radius:4px;
+	-moz-border-radius:4px ;
+	-webkit-border-radius:4px ;
+	color:#111111;
+	font-weight:bold;
+}
+
+.input_news{
+	width:100%;
+	height:26px;
+	border:1px solid #73BC3E;
+	border-radius:4px;
+	-moz-border-radius:4px ;
+	-webkit-border-radius:4px ;
+	margin-bottom:10px;
+	-webkit-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.18);
+ 	-moz-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.18);
+  	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.18);
+}
+
+.buttom_news{
+	background:#AE55A5;
+	/*width:54px;*/
+	color:#FFF;
+	font-size:16px;
+	padding:5px;
+	float:right;
+	border:1px solid #AE55A5;
+	border-radius:2px;
+	-moz-border-radius:2px ;
+	-webkit-border-radius:2px ;
+	-webkit-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.18);
+ 	-moz-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.18);
+  	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.18);
+	-webkit-transition: all 0.2s;
+  	-moz-transition: all 0.2s;
+  	-ms-transition: all 0.2s;
+  	-o-transition: all 0.2s;
+  	transition: all 0.2s;
+	cursor:pointer;
+}
+
+.buttom_news:hover{
+	background:#73BC3E;
+	border:1px solid #73BC3E;
+	-webkit-transition: all 0.2s;
+  	-moz-transition: all 0.2s;
+  	-ms-transition: all 0.2s;
+  	-o-transition: all 0.2s;
+  	transition: all 0.2s;
+}
+
+	/* Fim Config. Classes */
+	
+	
+	/* Meio Left */
+	
+#destaque{
+	width:100%;
+	margin:0px auto;
+}
+
+#produtos_destaque{
+	width: 100%;
+}
+
+#produtos_destaque ul {
+  text-align: center;
+  display: inline;
+  height:auto;
+  margin: 0;
+  /*padding: 15px 4px 17px 0;*/
+  list-style: none;
+}
+
+#produtos_destaque ul li {
+  font-size: 16px;
+  width:100%;
+  height:auto;
+  text-align:center;
+  display: inline-block; 
+ /* margin-top:10px;*/
+  margin-bottom:15px;
+  /*position: relative;
+  padding: 7px 16px;*/
+  color:#000;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border-bottom:3px solid #A864AB;
+}
+
+#produtos_destaque ul li:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border-bottom:3px solid #73BC3E;
+}
+
+	/* Fim Meio Left */
+	
+	
+	/* INICIO PAG PRODUTO */
+
+#produto{
+	width:668px;
+	height:720px;
+	float:left;
+}
+
+/* Topo Produto */
+
+#prod_topo2{
+	width:100%;
+	margin-left:-20px;
+	height:130px;
+	margin-top:25px;
+	margin-bottom:25px;
+	float:left;
+}
+
+#logo_prod2{
+	width:100%;
+	height:130px;
+	float:left;
+}
+
+#logo_prod2 img{
+	width:80%;
+}
+
+#logo_prod2 h2{
+	font-weight:normal;
+	font-size:20px;
+	color:#A561AB;
+}
+
+.produto_img{
+	border-bottom:3px solid #A864AB;
+	margin-right:10px;
+}
+
+#prod_mostrar{
+	float:left;
+	margin-top:20px;
+	margin-left:30px;
+	width:668px;
+	height:388px;
+}
+
+#prod_mostrar h2{
+	color:#000;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+	text-align:left;
+	font-weight:300;
+}
+
+#prod_mostrar .um{
+	font-size:22px !important;
+}
+
+#prod_mostrar .dois{
+	font-size:18px !important;
+}
+
+#likes{
+	margin-top:10px;
+	width:692px;
+}
+
+.fb_iframe_widget {
+	display: inline-flex !important;
+}
+
+
+/* FIM PAG PRODUTO */
+	
